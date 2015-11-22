@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <h3 class="col-sm-offset-3 col-sm-6">Signup</h3>
+    </div
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-2">
+        </div>
+        <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+ <div class="row">
+                        <div class="col-xs-4 col-md-4">
+                            <select name="month" class = "form-control input-lg">
+                                <option value="01">Jan</option><option value="02">Feb</option><option value="03">Mar</option>
+                                <option value="04">Apr</option><option value="05">May</option><option value="06">Jun</option>
+                                <option value="07">Jul</option><option value="08">Aug</option><option value="09">Sep</option>
+                                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select name="day" class = "form-control input-lg">
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+                                <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                                <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                                <option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
+                                <option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="21">21</option>
+                                <option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option>
+                                <option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option>
+                                <option value="30">30</option><option value="31">31</option>
+                            </select>                        
+                        </div>
+                        <div class="col-xs-4 col-md-4">
+                            <select name="year" class = "form-control input-lg">
+                                <option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option>
+                                <option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option>
+                                <option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option>
+                                <option value="2013">2013</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label>Gender : </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender" value="M" id=male />Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="gender" value="F" id=female />Female
+                    </label>
+                    <br />
+
+<span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+                
+                
+        </div>
+      </div>
+    </div>
+</div>
